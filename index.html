@@ -64,8 +64,19 @@
 
       <div class="product-grid">
         <article class="product-card">
-          <div class="product-art product-photo">
-            <img src="images/shirts-gallery.png" alt="Bleach-painted tee portfolio">
+          <div class="product-art product-gallery" data-gallery="shirts">
+            <div class="gallery-track">
+              <img class="gallery-slide active" src="images/shirt-1-polished.jpg" alt="Bleach-painted tee example 1">
+              <img class="gallery-slide" src="images/shirt-2-polished.jpg" alt="Bleach-painted tee example 2">
+              <img class="gallery-slide" src="images/shirt-3-polished.jpg" alt="Bleach-painted tee example 3">
+            </div>
+            <button type="button" class="gallery-arrow gallery-prev" aria-label="Previous image">‹</button>
+            <button type="button" class="gallery-arrow gallery-next" aria-label="Next image">›</button>
+            <div class="gallery-dots">
+                <button type="button" class="gallery-dot active" aria-label="Show image 1" data-slide="0"></button>
+                <button type="button" class="gallery-dot" aria-label="Show image 2" data-slide="1"></button>
+                <button type="button" class="gallery-dot" aria-label="Show image 3" data-slide="2"></button>
+            </div>
           </div>
           <div class="product-body">
             <p class="product-kicker">01 / WEARABLE ART</p>
@@ -83,8 +94,17 @@
         </article>
 
         <article class="product-card">
-          <div class="product-art product-photo">
-            <img src="images/flowers-gallery.png" alt="Flower arrangement portfolio">
+          <div class="product-art product-gallery" data-gallery="flowers">
+            <div class="gallery-track">
+              <img class="gallery-slide active" src="images/flowers-1-polished.jpg" alt="Flower arrangement example 1">
+              <img class="gallery-slide" src="images/flowers-2-polished.jpg" alt="Flower arrangement example 2">
+            </div>
+            <button type="button" class="gallery-arrow gallery-prev" aria-label="Previous image">‹</button>
+            <button type="button" class="gallery-arrow gallery-next" aria-label="Next image">›</button>
+            <div class="gallery-dots">
+                <button type="button" class="gallery-dot active" aria-label="Show image 1" data-slide="0"></button>
+                <button type="button" class="gallery-dot" aria-label="Show image 2" data-slide="1"></button>
+            </div>
           </div>
           <div class="product-body">
             <p class="product-kicker">02 / FLOWERS</p>
@@ -102,15 +122,28 @@
         </article>
 
         <article class="product-card">
-          <div class="product-art product-photo">
-            <img src="images/sweets-gallery.png" alt="Chocolate, fruit and sweet arrangement portfolio">
+          <div class="product-art product-gallery" data-gallery="sweets">
+            <div class="gallery-track">
+              <img class="gallery-slide active" src="images/sweets-1-polished.jpg" alt="Chocolate, fruit, and sweet arrangement example 1">
+              <img class="gallery-slide" src="images/sweets-2-polished.jpg" alt="Chocolate, fruit, and sweet arrangement example 2">
+              <img class="gallery-slide" src="images/sweets-3-polished.jpg" alt="Chocolate, fruit, and sweet arrangement example 3">
+              <img class="gallery-slide" src="images/sweets-4-polished.jpg" alt="Chocolate, fruit, and sweet arrangement example 4">
+            </div>
+            <button type="button" class="gallery-arrow gallery-prev" aria-label="Previous image">‹</button>
+            <button type="button" class="gallery-arrow gallery-next" aria-label="Next image">›</button>
+            <div class="gallery-dots">
+                <button type="button" class="gallery-dot active" aria-label="Show image 1" data-slide="0"></button>
+                <button type="button" class="gallery-dot" aria-label="Show image 2" data-slide="1"></button>
+                <button type="button" class="gallery-dot" aria-label="Show image 3" data-slide="2"></button>
+                <button type="button" class="gallery-dot" aria-label="Show image 4" data-slide="3"></button>
+            </div>
           </div>
           <div class="product-body">
             <p class="product-kicker">03 / SWEET GIFTS</p>
-            <h3>Chocolate & Fruit Arrangements</h3>
+            <h3>Chocolate, Fruit & Sweet Arrangements</h3>
             <p>
               Flower-filled arrangements featuring options like Ferrero Rocher,
-              chocolate-covered strawberries, fruit, and other custom touches.
+              chocolate-covered strawberries, brigadeiros, fruit, and other custom touches.
             </p>
             <div class="product-meta">
               <strong>Starting at $45</strong>
@@ -193,7 +226,7 @@
                 <option value="">Select one</option>
                 <option value="Bleach-painted tee">Bleach-painted tee</option>
                 <option value="Flower arrangement">Flower arrangement</option>
-                <option value="Chocolate and fruit arrangement">Chocolate & fruit arrangement</option>
+                <option value="Chocolate, fruit and sweet arrangement">Chocolate, fruit & sweet arrangement</option>
                 <option value="Custom / multiple items">Custom / multiple items</option>
               </select>
             </label>
@@ -243,7 +276,7 @@
               <select name="arrangement_type">
                 <option value="">Select one</option>
                 <option value="Flower arrangement">Flower arrangement</option>
-                <option value="Chocolate and fruit arrangement">Chocolate & fruit arrangement</option>
+                <option value="Chocolate, fruit and sweet arrangement">Chocolate, fruit & sweet arrangement</option>
                 <option value="Both / custom">Both / custom</option>
               </select>
             </label>
@@ -261,8 +294,8 @@
               <input type="text" name="flower_colors" placeholder="Pink, white, red, mixed, etc.">
             </label>
             <label>
-              Chocolate / fruit preferences
-              <input type="text" name="chocolate_fruit" placeholder="Ferrero Rocher, strawberries, assorted chocolate, etc.">
+              Sweets / fruit preferences
+              <input type="text" name="chocolate_fruit" placeholder="Ferrero Rocher, chocolate-covered strawberries, brigadeiros, fruit, assorted chocolate, etc.">
             </label>
           </div>
         </div>
@@ -358,6 +391,28 @@
         menuToggle.setAttribute("aria-expanded", "false");
       });
     });
+
+    document.querySelectorAll(".product-gallery").forEach((gallery) => {
+      const slides = Array.from(gallery.querySelectorAll(".gallery-slide"));
+      const dots = Array.from(gallery.querySelectorAll(".gallery-dot"));
+      const prev = gallery.querySelector(".gallery-prev");
+      const next = gallery.querySelector(".gallery-next");
+      let current = 0;
+
+      function showSlide(index) {
+        current = (index + slides.length) % slides.length;
+        slides.forEach((slide, i) => slide.classList.toggle("active", i === current));
+        dots.forEach((dot, i) => dot.classList.toggle("active", i === current));
+      }
+
+      prev.addEventListener("click", () => showSlide(current - 1));
+      next.addEventListener("click", () => showSlide(current + 1));
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => showSlide(i));
+      });
+    });
+
   </script>
 
 </body>
