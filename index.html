@@ -107,7 +107,7 @@
         <h2>Place an <em>order.</em></h2>
         <p>Tell me what you're looking for and I'll get back to you with availability and pricing.</p>
       </div>
-     ```html
+
 <form id="orderForm" action="https://formspree.io/f/mnparpok" method="POST">
   <div class="form-grid">
     <label>
@@ -153,7 +153,7 @@
     Your request will be sent securely. I'll get back to you by email!
   </p>
 </form>
-```
+
 
     </section>
   </main>
@@ -169,20 +169,25 @@
     <small>© 2026 Bleached & Bloomed. All rights reserved.</small>
   </footer>
 
-  <script>
-    const form = document.getElementById('orderForm');
-    const note = document.getElementById('formNote');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      note.textContent = "Your form is working visually! Connect a form endpoint before publishing so submissions actually reach you.";
-      note.classList.add('success');
-    });
-    document.querySelector('.menu').addEventListener('click', () => {
-      document.querySelector('.nav nav').classList.toggle('open');
-    });
-    document.querySelectorAll('.nav nav a').forEach(a => a.addEventListener('click', () => {
-      document.querySelector('.nav nav').classList.remove('open');
-    }));
-  </script>
+
+<script>
+  const form = document.getElementById('orderForm');
+  const note = document.getElementById('formNote');
+
+  form.addEventListener('submit', () => {
+    note.textContent = "Sending your order request...";
+    note.classList.add('success');
+  });
+
+  document.querySelector('.menu').addEventListener('click', () => {
+    document.querySelector('.nav nav').classList.toggle('open');
+  });
+
+  document.querySelectorAll('.nav nav a').forEach(a => a.addEventListener('click', () => {
+    document.querySelector('.nav nav').classList.remove('open');
+  }));
+</script>
+
+
 </body>
 </html>
