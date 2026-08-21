@@ -107,26 +107,54 @@
         <h2>Place an <em>order.</em></h2>
         <p>Tell me what you're looking for and I'll get back to you with availability and pricing.</p>
       </div>
-      <form id="orderForm">
-        <div class="form-grid">
-          <label>Name<input name="name" type="text" placeholder="Your name" required></label>
-          <label>Email<input name="email" type="email" placeholder="you@email.com" required></label>
-          <label>What are you interested in?
-            <select name="product">
-              <option>Bleach-painted tee</option>
-              <option>Flower arrangement</option>
-              <option>Chocolate arrangement</option>
-              <option>Custom / multiple items</option>
-            </select>
-          </label>
-          <label>Preferred date<input name="date" type="date"></label>
-        </div>
-        <label>Tell me what you have in mind
-          <textarea name="details" rows="6" placeholder="Size, colors, occasion, budget, design ideas, etc."></textarea>
-        </label>
-        <button class="button primary" type="submit">Send order request</button>
-        <p class="form-note" id="formNote">This demo form doesn't send anywhere yet — connect it to your preferred free form service when you're ready.</p>
-      </form>
+     ```html
+<form id="orderForm" action="https://formspree.io/f/mnparpok" method="POST">
+  <div class="form-grid">
+    <label>
+      Name
+      <input name="name" type="text" placeholder="Your name" required>
+    </label>
+
+    <label>
+      Email
+      <input name="email" type="email" placeholder="you@email.com" required>
+    </label>
+
+    <label>
+      What are you interested in?
+      <select name="product">
+        <option value="Bleach-painted tee">Bleach-painted tee</option>
+        <option value="Flower arrangement">Flower arrangement</option>
+        <option value="Chocolate arrangement">Chocolate arrangement</option>
+        <option value="Custom / multiple items">Custom / multiple items</option>
+      </select>
+    </label>
+
+    <label>
+      Preferred date
+      <input name="date" type="date">
+    </label>
+  </div>
+
+  <label>
+    Tell me what you have in mind
+    <textarea
+      name="details"
+      rows="6"
+      placeholder="Size, colors, occasion, budget, design ideas, etc."
+    ></textarea>
+  </label>
+
+  <input type="hidden" name="_subject" value="New Bleached & Bloomed Order Request">
+
+  <button class="button primary" type="submit">Send order request</button>
+
+  <p class="form-note" id="formNote">
+    Your request will be sent securely. I'll get back to you by email!
+  </p>
+</form>
+```
+
     </section>
   </main>
 
