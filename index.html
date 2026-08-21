@@ -3,271 +3,452 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Bleached & Bloomed</title>
-  <meta name="description" content="Bleached & Bloomed — handmade bleach-painted apparel, flower arrangements, chocolate gifts, and custom creations.">
+
+  <meta
+    name="description"
+    content="Bleached & Bloomed — handmade bleach-painted tees, flower arrangements, chocolate gifts, and custom creations."
+  >
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <header class="nav">
-    <a class="logo" href="#home">Bleached <span>&</span> Bloomed</a>
+  <!-- NAVIGATION -->
 
-    <button class="menu" aria-label="Open menu">☰</button>
+  <header class="navbar">
 
-    <nav>
-      <a href="#shop">Shop</a>
+    <a href="#home" class="logo">
+      Bleached <em>&</em> Bloomed
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="#collection">Collection</a>
       <a href="#custom">Custom</a>
       <a href="#about">About</a>
       <a href="#order">Order</a>
     </nav>
+
+    <button class="menu-button" id="menuButton" aria-label="Open menu">
+      ☰
+    </button>
+
   </header>
+
+
+  <!-- MOBILE NAV -->
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#collection">Collection</a>
+    <a href="#custom">Custom</a>
+    <a href="#about">About</a>
+    <a href="#order">Order</a>
+  </nav>
+
 
   <main>
 
     <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">HANDMADE • PERSONAL • ONE OF A KIND</p>
 
-        <h1>Made to be<br><em>remembered.</em></h1>
+    <section class="hero" id="home">
 
-        <p class="intro">
-          Handmade pieces for the people, moments, and occasions that deserve something a little more special.
+      <div class="hero-text">
+
+        <p class="eyebrow">
+          HANDMADE • PERSONAL • ONE OF A KIND
         </p>
 
-        <div class="buttons">
-          <a class="button primary" href="#shop">Explore the collection</a>
-          <a class="button secondary" href="#custom">Request something custom</a>
+        <h1>
+          Made to be
+          <em>remembered.</em>
+        </h1>
+
+        <p class="hero-description">
+          Handmade pieces for the people, moments, and occasions
+          that deserve something a little more special.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#collection" class="button dark">
+            Explore the collection
+          </a>
+
+          <a href="#order" class="button outline">
+            Place an order
+          </a>
+
         </div>
+
       </div>
+
 
       <div class="hero-art">
-        <div class="blob blob-one"></div>
-        <div class="blob blob-two"></div>
 
-        <div class="hero-card">
+        <div class="art-circle circle-sage"></div>
+
+        <div class="art-circle circle-rose"></div>
+
+        <div class="art-card">
+
           <span>handmade</span>
+
           <strong>with love</strong>
+
           <small>Bleached & Bloomed</small>
+
         </div>
+
       </div>
+
     </section>
 
 
     <!-- COLLECTION -->
-    <section id="shop" class="section">
+
+    <section class="collection section" id="collection">
 
       <div class="section-heading">
-        <p class="eyebrow">THE COLLECTION</p>
+
+        <p class="eyebrow">
+          THE COLLECTION
+        </p>
 
         <h2>
-          A little something<br>
+          A little something
           <em>for every occasion.</em>
         </h2>
+
+        <p>
+          Handmade gifts and wearable art created with care,
+          creativity, and a personal touch.
+        </p>
+
       </div>
+
 
       <div class="products">
 
-        <!-- SHIRTS -->
+
+        <!-- TEE -->
+
         <article class="product">
-          <div class="product-image shirt">
+
+          <div class="product-image tee-image">
             <span>👕</span>
           </div>
 
-          <div class="product-info">
-            <p>01 / WEARABLE ART</p>
+          <div class="product-content">
 
-            <h3>Bleach-Painted Tees</h3>
-
-            <p>
-              Hand-painted pieces made to stand out. Every design is created by hand, so no two are exactly alike.
+            <p class="product-number">
+              01 / WEARABLE ART
             </p>
 
-            <p><strong>Starting at $30</strong></p>
+            <h3>
+              Bleach-Painted Tees
+            </h3>
 
-            <a href="#order">Order a tee →</a>
+            <p>
+              Hand-painted pieces made to stand out.
+              Every design is created by hand, so no two
+              are exactly alike.
+            </p>
+
+            <div class="price">
+              Starting at $30
+            </div>
+
+            <a href="#order" class="product-link">
+              Order a tee →
+            </a>
+
           </div>
+
         </article>
 
 
         <!-- FLOWERS -->
+
         <article class="product">
-          <div class="product-image flowers">
+
+          <div class="product-image flower-image">
             <span>✿</span>
           </div>
 
-          <div class="product-info">
-            <p>02 / FLOWERS</p>
+          <div class="product-content">
 
-            <h3>Flower Arrangements</h3>
-
-            <p>
-              Thoughtful arrangements for birthdays, celebrations, surprises, and everything in between.
+            <p class="product-number">
+              02 / FLOWERS
             </p>
 
-            <p><strong>Starting at $35</strong></p>
+            <h3>
+              Flower Arrangements
+            </h3>
 
-            <a href="#order">Request flowers →</a>
+            <p>
+              Thoughtful arrangements for birthdays,
+              celebrations, surprises, and everything
+              in between.
+            </p>
+
+            <div class="price">
+              Starting at $35
+            </div>
+
+            <p class="pickup-note">
+              Pickup available
+            </p>
+
+            <a href="#order" class="product-link">
+              Request flowers →
+            </a>
+
           </div>
+
         </article>
 
 
         <!-- CHOCOLATE -->
+
         <article class="product">
-          <div class="product-image chocolate">
-            <span>03 / SWEET GIFTS</span>
+
+          <div class="product-image chocolate-image">
+            <span>♡</span>
           </div>
 
-          <div class="product-info">
-            <p>03 / SWEET GIFTS</p>
+          <div class="product-content">
 
-            <h3>Chocolate & Fruit Arrangements</h3>
-
-            <p>
-              A fun, giftable twist on traditional arrangements with flowers, chocolates, fruit, and handmade details.
+            <p class="product-number">
+              03 / SWEET GIFTS
             </p>
 
-            <p><strong>Starting at $45</strong></p>
+            <h3>
+              Chocolate & Fruit Arrangements
+            </h3>
 
-            <a href="#order">Request a gift →</a>
+            <p>
+              A fun twist on traditional arrangements
+              with flowers, chocolates, fruit, and
+              handmade details.
+            </p>
+
+            <div class="price">
+              Starting at $45
+            </div>
+
+            <p class="pickup-note">
+              Pickup available
+            </p>
+
+            <a href="#order" class="product-link">
+              Request a gift →
+            </a>
+
           </div>
+
         </article>
 
       </div>
+
     </section>
 
 
     <!-- CUSTOM -->
-    <section id="custom" class="custom">
 
-      <div>
-        <p class="eyebrow">MAKE IT YOURS</p>
+    <section class="custom-section" id="custom">
 
-        <h2>
-          Have something<br>
-          <em>specific in mind?</em>
-        </h2>
-      </div>
+      <div class="custom-heading">
 
-      <div class="custom-copy">
-        <p>
-          From a favorite color to a meaningful occasion, custom orders let you create something that feels personal from start to finish.
+        <p class="eyebrow">
+          MAKE IT YOURS
         </p>
 
-        <a class="button light" href="#order">
+        <h2>
+          Have something
+          <em>specific in mind?</em>
+        </h2>
+
+      </div>
+
+
+      <div class="custom-text">
+
+        <p>
+          Custom orders let you create something that feels
+          personal from start to finish. Tell me your ideas,
+          colors, occasion, or inspiration and we'll work
+          from there.
+        </p>
+
+        <a href="#order" class="button light">
           Start a custom order
         </a>
+
       </div>
 
     </section>
 
 
     <!-- ABOUT -->
-    <section id="about" class="about section">
 
-      <div class="about-card">
-        <p class="eyebrow">OUR STORY</p>
+    <section class="about section" id="about">
+
+      <div class="about-text">
+
+        <p class="eyebrow">
+          OUR STORY
+        </p>
 
         <h2>
-          Small business.<br>
+          Small business.
           <em>Big personality.</em>
         </h2>
 
         <p>
-          Bleached & Bloomed is a handmade gift and creative shop built around pieces that feel personal, thoughtful, and a little unexpected.
+          Bleached & Bloomed is a handmade gift and creative
+          shop built around pieces that feel personal,
+          thoughtful, and a little unexpected.
         </p>
 
         <p>
-          Whether you're shopping for yourself or trying to make someone's day, everything is made with the goal of giving you something you won't find sitting on a shelf.
+          Whether you're shopping for yourself or trying
+          to make someone's day, everything is made with
+          the goal of giving you something you won't find
+          sitting on a shelf.
         </p>
+
       </div>
 
-      <div class="quote">
+
+      <div class="about-quote">
+
         <span>“</span>
 
         <p>
-          Something handmade just feels different.
+          Something handmade
+          just feels different.
         </p>
+
       </div>
 
     </section>
 
 
     <!-- ORDER -->
-    <section id="order" class="order section">
+
+    <section class="order section" id="order">
 
       <div class="section-heading">
-        <p class="eyebrow">LET'S MAKE SOMETHING</p>
+
+        <p class="eyebrow">
+          LET'S MAKE SOMETHING
+        </p>
 
         <h2>
-          Place an <em>order.</em>
+          Place an
+          <em>order.</em>
         </h2>
 
         <p>
-          Tell me what you're looking for and I'll get back to you with availability and pricing.
+          Tell me what you're looking for and I'll get
+          back to you with availability and final pricing.
         </p>
+
       </div>
 
 
       <form
-        id="orderForm"
         action="https://formspree.io/f/mnparpok"
         method="POST"
+        id="orderForm"
       >
 
-        <div class="form-grid">
+        <!-- BASIC INFORMATION -->
 
-          <label>
-            Name
-            <input
-              name="name"
-              type="text"
-              placeholder="Your name"
-              required
-            >
-          </label>
+        <div class="form-block">
 
+          <p class="form-label">
+            YOUR INFORMATION
+          </p>
 
-          <label>
-            Email
-            <input
-              name="email"
-              type="email"
-              placeholder="you@email.com"
-              required
-            >
-          </label>
+          <div class="form-grid">
+
+            <label>
+              Name
+              <input
+                type="text"
+                name="name"
+                placeholder="Your name"
+                required
+              >
+            </label>
 
 
-          <label>
-            What are you interested in?
+            <label>
+              Email
+              <input
+                type="email"
+                name="email"
+                placeholder="you@email.com"
+                required
+              >
+            </label>
 
-            <select name="product" required>
-              <option value="Bleach-painted tee">Bleach-painted tee</option>
-              <option value="Flower arrangement">Flower arrangement</option>
-              <option value="Chocolate and fruit arrangement">Chocolate & fruit arrangement</option>
-              <option value="Custom / multiple items">Custom / multiple items</option>
-            </select>
-          </label>
+
+            <label>
+              What are you interested in?
+
+              <select name="product" required>
+
+                <option value="">
+                  Select one
+                </option>
+
+                <option value="Bleach-painted tee">
+                  Bleach-painted tee
+                </option>
+
+                <option value="Flower arrangement">
+                  Flower arrangement
+                </option>
+
+                <option value="Chocolate and fruit arrangement">
+                  Chocolate & fruit arrangement
+                </option>
+
+                <option value="Custom / multiple items">
+                  Custom / multiple items
+                </option>
+
+              </select>
+
+            </label>
 
 
-          <label>
-            Preferred date
-            <input
-              name="date"
-              type="date"
-            >
-          </label>
+            <label>
+              Preferred date
+
+              <input
+                type="date"
+                name="date"
+              >
+
+            </label>
+
+          </div>
 
         </div>
 
 
-        <!-- SHIRT DETAILS -->
+        <!-- TEE DETAILS -->
 
-        <div class="form-section">
+        <div class="form-block">
 
-          <p class="eyebrow">IF YOU'RE ORDERING A TEE</p>
+          <p class="form-label">
+            IF YOU'RE ORDERING A TEE
+          </p>
 
           <div class="form-grid">
 
@@ -275,24 +456,31 @@
               Shirt size
 
               <select name="shirt_size">
-                <option value="">Select a size</option>
+
+                <option value="">
+                  Select a size
+                </option>
+
                 <option value="XS">XS</option>
                 <option value="S">S</option>
                 <option value="M">M</option>
                 <option value="L">L</option>
                 <option value="XL">XL</option>
+
               </select>
+
             </label>
 
 
             <label>
-              Preferred shirt color
+              Shirt color
 
               <input
-                name="shirt_color"
                 type="text"
+                name="shirt_color"
                 placeholder="Black, white, gray, etc."
               >
+
             </label>
 
           </div>
@@ -306,6 +494,7 @@
               rows="4"
               placeholder="Tell me about the design, colors, words, images, or overall vibe you'd like."
             ></textarea>
+
           </label>
 
 
@@ -317,6 +506,7 @@
               rows="3"
               placeholder="Street, city, state, ZIP"
             ></textarea>
+
           </label>
 
         </div>
@@ -324,9 +514,11 @@
 
         <!-- ARRANGEMENT DETAILS -->
 
-        <div class="form-section">
+        <div class="form-block">
 
-          <p class="eyebrow">IF YOU'RE ORDERING AN ARRANGEMENT</p>
+          <p class="form-label">
+            IF YOU'RE ORDERING AN ARRANGEMENT
+          </p>
 
           <div class="form-grid">
 
@@ -334,11 +526,25 @@
               Arrangement type
 
               <select name="arrangement_type">
-                <option value="">Select one</option>
-                <option value="Flower arrangement">Flower arrangement</option>
-                <option value="Chocolate and fruit arrangement">Chocolate & fruit arrangement</option>
-                <option value="Both / custom">Both / custom</option>
+
+                <option value="">
+                  Select one
+                </option>
+
+                <option value="Flower arrangement">
+                  Flower arrangement
+                </option>
+
+                <option value="Chocolate and fruit arrangement">
+                  Chocolate & fruit arrangement
+                </option>
+
+                <option value="Both / custom">
+                  Both / custom
+                </option>
+
               </select>
+
             </label>
 
 
@@ -346,11 +552,25 @@
               Flowers
 
               <select name="flower_type">
-                <option value="">Select one</option>
-                <option value="Real flowers">Real flowers</option>
-                <option value="Artificial flowers">Artificial flowers</option>
-                <option value="No preference">No preference</option>
+
+                <option value="">
+                  Select one
+                </option>
+
+                <option value="Real flowers">
+                  Real flowers
+                </option>
+
+                <option value="Artificial flowers">
+                  Artificial flowers
+                </option>
+
+                <option value="No preference">
+                  No preference
+                </option>
+
               </select>
+
             </label>
 
 
@@ -358,10 +578,11 @@
               Preferred flower colors
 
               <input
-                name="flower_colors"
                 type="text"
+                name="flower_colors"
                 placeholder="Pink, white, red, mixed, etc."
               >
+
             </label>
 
 
@@ -369,10 +590,11 @@
               Chocolate / fruit preferences
 
               <input
-                name="chocolate_fruit"
                 type="text"
-                placeholder="Ferrero Rocher, strawberries, assorted chocolate, etc."
+                name="chocolate_fruit"
+                placeholder="Ferrero Rocher, strawberries, etc."
               >
+
             </label>
 
           </div>
@@ -380,11 +602,13 @@
         </div>
 
 
-        <!-- ORDER DETAILS -->
+        <!-- ADDITIONAL DETAILS -->
 
-        <div class="form-section">
+        <div class="form-block">
 
-          <p class="eyebrow">A FEW MORE DETAILS</p>
+          <p class="form-label">
+            A FEW MORE DETAILS
+          </p>
 
           <div class="form-grid">
 
@@ -392,15 +616,41 @@
               Occasion
 
               <select name="occasion">
-                <option value="">Select one</option>
-                <option value="Birthday">Birthday</option>
-                <option value="Anniversary">Anniversary</option>
-                <option value="Valentine's Day">Valentine's Day</option>
-                <option value="Graduation">Graduation</option>
-                <option value="Holiday">Holiday</option>
-                <option value="Just because">Just because</option>
-                <option value="Other">Other</option>
+
+                <option value="">
+                  Select one
+                </option>
+
+                <option value="Birthday">
+                  Birthday
+                </option>
+
+                <option value="Anniversary">
+                  Anniversary
+                </option>
+
+                <option value="Valentine's Day">
+                  Valentine's Day
+                </option>
+
+                <option value="Graduation">
+                  Graduation
+                </option>
+
+                <option value="Holiday">
+                  Holiday
+                </option>
+
+                <option value="Just because">
+                  Just because
+                </option>
+
+                <option value="Other">
+                  Other
+                </option>
+
               </select>
+
             </label>
 
 
@@ -408,13 +658,33 @@
               Approximate budget
 
               <select name="budget">
-                <option value="">Select a budget</option>
-                <option value="Under $40">Under $40</option>
-                <option value="$40–$60">$40–$60</option>
-                <option value="$60–$100">$60–$100</option>
-                <option value="$100+">$100+</option>
-                <option value="Not sure yet">Not sure yet</option>
+
+                <option value="">
+                  Select a budget
+                </option>
+
+                <option value="Under $40">
+                  Under $40
+                </option>
+
+                <option value="$40-$60">
+                  $40–$60
+                </option>
+
+                <option value="$60-$100">
+                  $60–$100
+                </option>
+
+                <option value="$100+">
+                  $100+
+                </option>
+
+                <option value="Not sure yet">
+                  Not sure yet
+                </option>
+
               </select>
+
             </label>
 
 
@@ -422,23 +692,35 @@
               For arrangements
 
               <select name="pickup">
-                <option value="">Select one</option>
-                <option value="I can pick up">I can pick up</option>
-                <option value="I need to discuss pickup">I need to discuss pickup</option>
+
+                <option value="">
+                  Select one
+                </option>
+
+                <option value="I can pick up">
+                  I can pick up
+                </option>
+
+                <option value="I need to discuss pickup">
+                  I need to discuss pickup
+                </option>
+
               </select>
+
             </label>
 
           </div>
 
 
           <label>
-            Tell me anything else you'd like me to know
+            Anything else you'd like me to know?
 
             <textarea
               name="details"
               rows="6"
               placeholder="Colors, inspiration, recipient, special requests, design ideas, or anything else you'd like to share."
             ></textarea>
+
           </label>
 
         </div>
@@ -452,15 +734,16 @@
 
 
         <button
-          class="button primary"
           type="submit"
+          class="button dark submit-button"
         >
           Send order request
         </button>
 
 
-        <p class="form-note" id="formNote">
-          Your request will be sent securely. I'll get back to you by email with availability and final pricing!
+        <p class="form-note">
+          Your request will be sent securely. I'll get back to you
+          by email with availability and final pricing.
         </p>
 
       </form>
@@ -471,48 +754,66 @@
 
 
   <!-- FOOTER -->
+
   <footer>
 
-    <div class="footer-logo">
-      Bleached <span>&</span> Bloomed
+    <div class="footer-brand">
+
+      <div class="logo footer-logo">
+        Bleached <em>&</em> Bloomed
+      </div>
+
+      <p>
+        Handmade with love in New Jersey.
+      </p>
+
     </div>
 
-    <p>Handmade with love.</p>
 
-    <div class="socials">
-      <a href="#" aria-label="Instagram">Instagram</a>
-      <a href="#" aria-label="TikTok">TikTok</a>
-      <a href="mailto:hello@example.com">Email</a>
+    <div class="footer-social">
+
+      <p>
+        FOLLOW & CONTACT
+      </p>
+
+      <a
+        href="https://www.instagram.com/julianaestevesm/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram @julianaestevesm →
+      </a>
+
     </div>
 
-    <small>
-      © 2026 Bleached & Bloomed. All rights reserved.
-    </small>
+
+    <div class="footer-bottom">
+
+      <small>
+        © 2026 Bleached & Bloomed. All rights reserved.
+      </small>
+
+    </div>
 
   </footer>
 
 
   <!-- JAVASCRIPT -->
+
   <script>
 
-    const form = document.getElementById('orderForm');
-    const note = document.getElementById('formNote');
+    const menuButton = document.getElementById("menuButton");
+    const mobileNav = document.getElementById("mobileNav");
 
-    form.addEventListener('submit', () => {
-      note.textContent = "Sending your order request...";
-      note.classList.add('success');
+    menuButton.addEventListener("click", function() {
+      mobileNav.classList.toggle("open");
     });
 
 
-    document.querySelector('.menu').addEventListener('click', () => {
-      document.querySelector('.nav nav').classList.toggle('open');
-    });
+    document.querySelectorAll(".mobile-nav a").forEach(function(link) {
 
-
-    document.querySelectorAll('.nav nav a').forEach(a => {
-
-      a.addEventListener('click', () => {
-        document.querySelector('.nav nav').classList.remove('open');
+      link.addEventListener("click", function() {
+        mobileNav.classList.remove("open");
       });
 
     });
