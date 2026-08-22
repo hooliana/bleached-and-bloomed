@@ -66,9 +66,9 @@
         <article class="product-card">
           <div class="product-art product-gallery" data-gallery="shirts">
             <div class="gallery-track">
-              <img class="gallery-slide active" src="images/shirttttt%201.png" alt="Bleach-painted tee example 1">
-              <img class="gallery-slide" src="images/shirtttttt%202.png" alt="Bleach-painted tee example 2">
-              <img class="gallery-slide" src="images/ChatGPT%20Image%20Aug%2021,%202026,%2007_47_26%20PM.png" alt="Bleach-painted tee example 3">
+              <img class="gallery-slide active" src="images/shirt-1-polished.jpg" alt="Bleach-painted tee example 1">
+              <img class="gallery-slide" src="images/shirt-2-polished.jpg" alt="Bleach-painted tee example 2">
+              <img class="gallery-slide" src="images/shirt-3-polished.jpg" alt="Bleach-painted tee example 3">
             </div>
             <button type="button" class="gallery-arrow gallery-prev" aria-label="Previous image">‹</button>
             <button type="button" class="gallery-arrow gallery-next" aria-label="Next image">›</button>
@@ -96,8 +96,8 @@
         <article class="product-card">
           <div class="product-art product-gallery" data-gallery="flowers">
             <div class="gallery-track">
-              <img class="gallery-slide active" src="images/flowerrrrrrrr%201.png" alt="Flower arrangement example 1">
-              <img class="gallery-slide" src="images/ChatGPT%20Image%20Aug%2021,%202026,%2007_47_34%20PM.png" alt="Flower arrangement example 2">
+              <img class="gallery-slide active" src="images/flowers-1-polished.jpg" alt="Flower arrangement example 1">
+              <img class="gallery-slide" src="images/flowers-2-polished.jpg" alt="Flower arrangement example 2">
             </div>
             <button type="button" class="gallery-arrow gallery-prev" aria-label="Previous image">‹</button>
             <button type="button" class="gallery-arrow gallery-next" aria-label="Next image">›</button>
@@ -124,10 +124,10 @@
         <article class="product-card">
           <div class="product-art product-gallery" data-gallery="sweets">
             <div class="gallery-track">
-              <img class="gallery-slide active" src="images/chocolate%20strawberriessssss%201.png" alt="Chocolate, fruit, and sweet arrangement example 1">
-              <img class="gallery-slide" src="images/fruitsssssss%202.png" alt="Chocolate, fruit, and sweet arrangement example 2">
-              <img class="gallery-slide" src="images/brigadeirooooo%203.png" alt="Chocolate, fruit, and sweet arrangement example 3">
-              <img class="gallery-slide" src="images/ChatGPT%20Image%20Aug%2021,%202026,%2007_47_45%20PM.png" alt="Chocolate, fruit, and sweet arrangement example 4">
+              <img class="gallery-slide active" src="images/sweets-1-polished.jpg" alt="Chocolate, fruit, and sweet arrangement example 1">
+              <img class="gallery-slide" src="images/sweets-2-polished.jpg" alt="Chocolate, fruit, and sweet arrangement example 2">
+              <img class="gallery-slide" src="images/sweets-3-polished.jpg" alt="Chocolate, fruit, and sweet arrangement example 3">
+              <img class="gallery-slide" src="images/sweets-4-polished.jpg" alt="Chocolate, fruit, and sweet arrangement example 4">
             </div>
             <button type="button" class="gallery-arrow gallery-prev" aria-label="Previous image">‹</button>
             <button type="button" class="gallery-arrow gallery-next" aria-label="Next image">›</button>
@@ -393,6 +393,7 @@
     });
 
     document.querySelectorAll(".product-gallery").forEach((gallery) => {
+      const track = gallery.querySelector(".gallery-track");
       const slides = Array.from(gallery.querySelectorAll(".gallery-slide"));
       const dots = Array.from(gallery.querySelectorAll(".gallery-dot"));
       const prev = gallery.querySelector(".gallery-prev");
@@ -401,7 +402,7 @@
 
       function showSlide(index) {
         current = (index + slides.length) % slides.length;
-        slides.forEach((slide, i) => slide.classList.toggle("active", i === current));
+        track.style.transform = `translateX(-${current * 100}%)`;
         dots.forEach((dot, i) => dot.classList.toggle("active", i === current));
       }
 
@@ -411,6 +412,9 @@
       dots.forEach((dot, i) => {
         dot.addEventListener("click", () => showSlide(i));
       });
+
+      showSlide(0);
+    });
     });
 
   </script>
