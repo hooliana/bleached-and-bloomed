@@ -796,3 +796,21 @@ textarea{resize:vertical}
   }
 }
 
+
+
+/* Keep carousel images visible and contained */
+.product-gallery .gallery-track{
+  width:100%;
+  height:100%;
+}
+.product-gallery img.gallery-slide{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.product-gallery img.gallery-slide.active{
+  display:block;
+}
